@@ -1,3 +1,4 @@
+// api/index.js API 로직 
 import axios from 'axios';
 
 // 1. HTTP Requeset & Response와 관련된 기본 설정
