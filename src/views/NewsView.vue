@@ -1,24 +1,42 @@
 <template>
   <div>
-    <div v-for="user in users" v-bind:key="user.id">
+    <div v-for="user in news" v-bind:key="user.id">
       {{ user.title }}
     </div>
   </div>
 </template>
 
 <script>
-import { fetchNewsList } from '../api/index.js';
+import { mapState } from 'vuex';
 
 export default {
-  data() {
-    return {
-      users: [],
-    }
+  computed: {
+    ...mapState({
+      news: state => state.news,
+    })
+    /*
+      ...mapGetters({
+        news: 'fetchedNews',
+      })
+      ...mapGetters([
+        'fetchedNews',
+      ]),
+    */
+    /* 
+      #2
+      ...mapState({
+        news: state => state.news,
+      })
+    */
+    /*
+      #1
+      news() {
+        return this.$store.state.news;
+      }
+    */
   },
   created() {
-    fetchNewsList()
-      .then(res => this.users = res.data)
-      .catch(err => console.log(err))
+    this.$store.dispatch ('FETCH_NEWS');
   },
 }
 </script>
