@@ -1,8 +1,8 @@
 <template>
   <div class="header">
-    <router-link to="/news">News</router-link> | 
-    <router-link to="/ask">Ask</router-link> | 
-    <router-link to="/jobs">Jobs</router-link> |
+    <span><router-link to="/news">News</router-link></span> | 
+    <span><router-link to="/ask">Ask</router-link></span> | 
+    <span><router-link to="/jobs">Jobs</router-link></span> |
   </div>
 </template>
 
@@ -18,5 +18,8 @@
   }
   .header a {
     color: #ffffff;
+  }
+  .header span {
+    padding: 0 5px;
   }
 </style>>

@@ -1,8 +1,8 @@
 <template>
   <div>
-    <p>name : {{ user.id }}</p>
-    <p>karma : {{ user.karma }}</p>
+    <p>user : {{ user.id }}</p>
     <p>created : {{ user.created }}</p>
+    <p>karma : {{ user.karma }}</p>
   </div>
 </template>
 
