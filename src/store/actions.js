@@ -17,8 +17,8 @@ export default {
       .then(({ data }) => commit('SET_JOBS', data))
       .catch(err => console.log(err))
   },
-  FETCH_USER({ commit }, username) {
-    fetchUserInfo(username)
+  FETCH_USER({ commit }, userId) {
+    fetchUserInfo(userId)
       .then(({ data }) => commit('SET_USER', data))
       .catch(err => console.log(err));
   }
