@@ -1,37 +1,37 @@
 <template>
   <div>
     <section>
-      <!-- 질문 상세 정보 -->
-      <div class="user-container">
-        <div>
-          <i class="fas fa-user"></i>
-        </div>
-        <div class="user-description">
-          <router-link :to="`/user/${item.user}`">
-            {{ item.user }}
-          </router-link>
-          <div class="time">
-            {{ item.time_ago }}
-          </div>
-        </div>
-      </div>
-      <h2>{{ item.title }}</h2>
+      <!-- 사용자 정보 -->
+      <UserProfile :info="itemInfo">
+        <router-link slot="username" :to="`/user/${itemInfo.user}`">
+          {{ itemInfo.user }}
+        </router-link>
+        <template slot="time">
+          {{ `Posted ${itemInfo.time_ago}` }}
+        </template>
+      </UserProfile>
+    </section>
+    <section>
+      <h2>{{ itemInfo.title }}</h2>
     </section>
     <section>
       <!-- 질문 댓글 -->
-      <div v-html="item.content"></div>
+      <div v-html="itemInfo.content"></div>
     </section>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import UserProfile from '../components/UserProfile.vue';
 
 export default {
   computed: {
-    ...mapState({
-      item: state => state.item,
-    })
+    itemInfo() {
+      return this.$store.state.item;
+    },
+  },
+  components: {
+    UserProfile,
   },
   created() {
     const itemId = this.$route.params.id;
