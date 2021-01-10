@@ -45,18 +45,6 @@ export default {
       }
     }
   },
-  created() {
-    const name = this.$route.name;
-    let fetchName = '';
-    if (name === 'news') {
-      fetchName = 'FETCH_NEWS';
-    } else if (name === 'ask') {
-      fetchName = 'FETCH_ASK';
-    } else if (name === 'jobs') {
-      fetchName = 'FETCH_JOBS';
-    }
-    this.$store.dispatch(fetchName);
-  },
 }
 </script>
 

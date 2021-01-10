@@ -25,13 +25,13 @@
 import UserProfile from '../components/UserProfile.vue';
 
 export default {
+  components: {
+    UserProfile,
+  },
   computed: {
     itemInfo() {
       return this.$store.state.item;
     },
-  },
-  components: {
-    UserProfile,
   },
   created() {
     const itemId = this.$route.params.id;
