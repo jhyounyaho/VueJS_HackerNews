@@ -1,6 +1,7 @@
 // routes/index.js router 로직
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import NewsView from '../views/NewsView.vue';
 import createListView from '../views/CreateListView.js';
 import UserView from '../views/UserView.vue';
 import ItemView from '../views/ItemView.vue';
@@ -20,17 +21,17 @@ export const router = new VueRouter({
     {
       path: '/news',
       name: 'news',
-      component: createListView('NewsView'),
+      component: NewsView, // Mixin
     },
     {
       path: '/ask',
       name: 'ask',
-      component: createListView('AskView'),
+      component: createListView('AskView'), // HOC
     },
     {
       path: '/jobs',
       name: 'jobs',
-      component: createListView('JobsView'),
+      component: createListView('JobsView'), // HOC
     },
     {
       path: '/user/:id',

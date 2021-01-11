@@ -38,17 +38,17 @@ export default {
   },
   */
   FETCH_USER({ commit }, userId) {
-    fetchUserInfo(userId)
+    return fetchUserInfo(userId)
       .then(({ data }) => commit('SET_USER', data))
       .catch(err => console.log(err));
   },
   FETCH_ITEM({ commit }, id) {
-    fetchCommentItem(id)
+    return fetchCommentItem(id)
       .then(({ data }) => commit('SET_ITEM', data))
       .catch(err => console.log(err));
   },
   FETCH_LIST({ commit }, pageName) {
-    fetchList(pageName)
+    return fetchList(pageName)
       .then(({ data }) => commit('SET_LIST', data)) 
       .catch(err => console.log(err));
   },
