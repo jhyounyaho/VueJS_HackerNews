@@ -1,13 +1,17 @@
 import { 
+  /*
   fetchNewsList, 
   fetchAskList, 
   fetchJobsList, 
+  */
+  fetchList,
   fetchUserInfo,
   fetchCommentItem,
 } from '../api/index.js';
 
 export default {
   // actions 비동기 호출
+  /*
   FETCH_NEWS(context) {
     fetchNewsList()
       .then(res => {
@@ -32,6 +36,7 @@ export default {
       })
       .catch(err => console.log(err))
   },
+  */
   FETCH_USER({ commit }, userId) {
     fetchUserInfo(userId)
       .then(({ data }) => commit('SET_USER', data))
@@ -40,6 +45,11 @@ export default {
   FETCH_ITEM({ commit }, id) {
     fetchCommentItem(id)
       .then(({ data }) => commit('SET_ITEM', data))
+      .catch(err => console.log(err));
+  },
+  FETCH_LIST({ commit }, pageName) {
+    fetchList(pageName)
+      .then(({ data }) => commit('SET_LIST', data)) 
       .catch(err => console.log(err));
   },
 }
