@@ -3,6 +3,7 @@
     <span><router-link to="/news">News</router-link></span> | 
     <span><router-link to="/ask">Ask</router-link></span> | 
     <span><router-link to="/jobs">Jobs</router-link></span> |
+    <span><router-link to="/async">async await</router-link></span> 
   </div>
 </template>
 

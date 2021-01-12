@@ -19,13 +19,28 @@ function fetchJobsList() {
 }
 */
 function fetchList(pageName) {
-  return axios.get(`${config.baseUrl}${pageName}/1.json`);
+  try {
+    const res = axios.get(`${config.baseUrl}${pageName}/1.json`);
+    return res;
+  } catch(err) {
+    console.log(err);
+  }
 }
 function fetchUserInfo(userId) {
-  return axios.get(`${config.baseUrl}user/${userId}.json`);    
+  try {
+    const res = axios.get(`${config.baseUrl}user/${userId}.json`);    
+    return res;
+  } catch(err) {
+    console.log(err);
+  }
 }
 function fetchCommentItem(id) {
-  return axios.get(`${config.baseUrl}item/${id}.json`);    
+  try {
+    const res = axios.get(`${config.baseUrl}item/${id}.json`);    
+    return res;
+  } catch(err) {
+    console.log(err);
+  }
 }
 
 // 3. export 

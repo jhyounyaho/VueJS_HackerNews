@@ -7,6 +7,7 @@ import JobsView from '../views/JobsView.vue';
 //import createListView from '../views/CreateListView.js';
 import UserView from '../views/UserView.vue';
 import ItemView from '../views/ItemView.vue';
+import AsyncAwaitView from '../views/AsyncAwaitView.vue';
 import bus from '../utils/bus';
 import { store } from '../store/index.js';
 
@@ -67,6 +68,10 @@ export const router = new VueRouter({
     {
       path: '/item/:id',
       component: ItemView,
+    },
+    {
+      path: '/async',
+      component: AsyncAwaitView,
     },
   ],
 });
