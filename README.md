@@ -18,3 +18,7 @@ https://github.com/HackerNews/API
 2. 컴포넌트 라이프 사이클 훅
 
 - created : (컴포넌트가 생성) 되자마자 호출되는 로직
+
+## 완강은 즐거웡:D  
+![vuejs_certificate_of_completion](https://user-images.githubusercontent.com/42309919/104392801-351cf180-5586-11eb-895a-3ee9c397adc9.PNG)
+
