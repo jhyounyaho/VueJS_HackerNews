@@ -33,6 +33,8 @@ export default {
     },
   },
   created() {
+    // .env 에서 설정한 값 노출 
+    console.log(process.env.VUE_APP_TITLE)
     bus.$on('start:spinner', this.startSpinner);
     bus.$on('end:spinner', this.endSpinner);
   },
