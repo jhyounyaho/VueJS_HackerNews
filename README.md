@@ -9,6 +9,17 @@ skill: JavaScript, Vue.js, ES6, Vuex, Router, RESTFul API
 https://news.ycombinator.com/  
 https://github.com/HackerNews/API
 
+## 디렉토리     
+    src
+      ├── api                         # api 저장 폴더             
+      ├── components                  # component 저장 폴더(ListItem, Spinner, Toolbar, UserProfile)  
+      ├── mixins                      # mixins 저장 폴더 - 재사용할 컴포넌트 옵션들이 들어갈 자리(ListMixin)
+      ├── routes                      # router 저장 폴더 
+      ├── store                       # store 저장 폴더 (index, mutations, actions 분리)
+      ├── utils                       # utils 저장 폴더 
+      └── views                       # views 저장 폴더 - View단 (NewsView, AskView, JobsView...)
+      App.vue                           
+                        
 ## 데이터 호출 시점
 
 1. 라우터 네비게이션 가드
